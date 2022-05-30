@@ -8,7 +8,7 @@ const Slider = ({ data }) => {
       {data.map((el, indx) => {
         if (indx === page) {
           return (
-            <div key={indx}>
+            <div key={el.id}>
               <h3 data-testid='question'>{el.question}</h3>
               <p data-testid='answer'>{el.answer}</p>
             </div>
