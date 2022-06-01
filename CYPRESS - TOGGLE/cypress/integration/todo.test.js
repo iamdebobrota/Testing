@@ -36,5 +36,15 @@ describe("should it todo application ", function(){
         cy.wait("@todoReq");
 
         cy.get(".todo-list .items").should("have.length",2).and("contain",text);
+
+
+
+        cy.get(".button").click();
+        
+        cy.get(".heading").should("have.css",{color:"green"})
+        
+        cy.get(".button").click();
+        
+        cy.get(".heading").should("have.css",{color:"black"})
     })
 })
